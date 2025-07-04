@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "assignment"; // make sure this matches the database name in phpMyAdmin
+$dbname = "assignment"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
