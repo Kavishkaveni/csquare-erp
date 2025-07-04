@@ -1,7 +1,7 @@
 <?php
 include '../db/connection.php';
 
-// Check if ID is provided
+
 if (!isset($_GET['id'])) {
     header("Location: view_customer.php");
     exit();
@@ -9,11 +9,11 @@ if (!isset($_GET['id'])) {
 
 $id = intval($_GET['id']);
 
-// Initialize variables
+
 $title = $first_name = $last_name = $contact_no = $district = "";
 $error = "";
 
-// If form submitted, update the customer
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $conn->real_escape_string($_POST['title']);
     $first_name = $conn->real_escape_string($_POST['first_name']);
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contact_no = $conn->real_escape_string($_POST['contact_no']);
     $district = $conn->real_escape_string($_POST['district']);
 
-    // Simple validation (you can add more)
+    
     if (empty($first_name) || empty($last_name) || empty($contact_no) || empty($district)) {
         $error = "Please fill all required fields.";
     } else {
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 } else {
-    // Load customer data to pre-fill form
+    
     $result = $conn->query("SELECT * FROM customer WHERE id=$id");
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
