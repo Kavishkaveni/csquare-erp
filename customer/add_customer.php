@@ -1,7 +1,7 @@
 <?php
 include '../db/connection.php';
 
-// Fetch districts for dropdown
+
 $districts = [];
 $district_query = "SELECT * FROM district";
 $result = $conn->query($district_query);
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $contact_no = $_POST['contact_no'];
-    $district_id = $_POST['district']; // this is ID
+    $district_id = $_POST['district']; 
 
     $sql = "INSERT INTO customer (title, first_name, last_name, contact_no, district)
             VALUES ('$title', '$first_name', '$last_name', '$contact_no', '$district_id')";
