@@ -4,7 +4,7 @@ This project is a PHP & MySQL based ERP system assignment for Csquare Technologi
 
 ## How to run
 
-1. Import the provided database file (assignment.sql) into phpMyAdmin.
+1. Import the provided database file (assignment(1).sql) into phpMyAdmin.
 2. Update database connection details in db/connection.php.
 3. Run the project on your local server (XAMPP).
 4. Access via http://localhost/csquare-erp.
